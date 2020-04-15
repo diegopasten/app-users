@@ -1,0 +1,12 @@
+trigger:
+  branches:
+    include:
+    - '*'
+
+pool:
+  vmImage: 'ubuntu-16.04'
+container: adoptopenjdk:11-jdk-hotspot
+steps:
+- script: java --version
+- script: ls $(Pipeline.Workspace)
+- script: $(Pipeline.Workspace)/s/gradlew build --stacktrace
