@@ -16,4 +16,4 @@ steps:
     SourceFolder: $(Build.SourcesDirectory)/build/libs/
     targetFolder: $(Build.ArtifactStagingDirectory)
 - script: ls $(Build.ArtifactStagingDirectory)
-#- publish: $(Build.SourcesDirectory)/build/libs/*.jar
+- publish: $(Build.SourcesDirectory)/build/libs/*.jar
