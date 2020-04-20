@@ -10,5 +10,5 @@ steps:
 - script: java --version
 - script: ls $(Pipeline.Workspace)
 - script: $(Pipeline.Workspace)/s/gradlew build --stacktrace
-- publish: $(System.DefaultWorkingDirectory)/build/libs/*.jar
+- publish: $(System.DefaultWorkingDirectory)/s/build/libs/*.jar
   artifact: app-users-jar
