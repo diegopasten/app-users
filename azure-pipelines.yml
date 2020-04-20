@@ -11,7 +11,7 @@ steps:
 - script: ls $(Pipeline.Workspace)
 - script: $(Pipeline.Workspace)/s/gradlew build --stacktrace
 - script: ls $(Build.SourcesDirectory)/build/libs/
-- task: CopyFiles
+- task: CopyFiles@2
   inputs:
     SourceFolder: $(Build.SourcesDirectory)/build/libs/
     targetFolder: $(Build.ArtifactStagingDirectory)
