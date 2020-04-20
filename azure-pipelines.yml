@@ -17,3 +17,4 @@ steps:
     targetFolder: $(Build.ArtifactStagingDirectory)
 - script: ls $(Build.ArtifactStagingDirectory)
 - publish: $(Build.SourcesDirectory)/build/libs/*.jar
+  artifact: app-users
